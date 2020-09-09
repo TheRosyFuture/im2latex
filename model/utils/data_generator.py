@@ -170,6 +170,13 @@ class DataGenerator(object):
         img_path, formula_id = example
 
         img = imread(self._dir_images + "/" + img_path)
+
+# <<<<<<<<< hanjjn code
+        img_shape = np.shape(img)
+        area = img_shape[0] * img_shape[1]
+        max_area = 400 * 160
+# >>>>>>>>> hanjin code
+
         img = self._img_prepro(img)
         formula = self._form_prepro(self._get_raw_formula(formula_id))
 
@@ -183,6 +190,12 @@ class DataGenerator(object):
             skip = True
         else:
             skip = False
+
+# <<<<<<<<< hanjin code
+        if area >= max_area:
+            print("************ area is larger than max area ****************")
+            skip = True
+# >>>>>>>>> hanjin code
 
         return inst, skip
 

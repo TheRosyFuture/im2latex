@@ -54,16 +54,18 @@ input> data/images_test/0.png""")
 
             img = imread(img_path)
 
-
+        print("img")
+        print(img)
         img = greyscale(img)
+        print("hyps")
         hyps = model.predict(img)
-
+        print("logger")
         model.logger.info(hyps[0])
 
 
 if __name__ == "__main__":
     # restore config and model
-    dir_output = "results/small/"
+    dir_output = "results/full/"
     config_vocab = Config(dir_output + "vocab.json")
     config_model = Config(dir_output + "model.json")
     vocab = Vocab(config_vocab)

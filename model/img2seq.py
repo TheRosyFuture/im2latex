@@ -3,6 +3,9 @@ import numpy as np
 import tensorflow as tf
 import tensorflow.contrib.layers as layers
 
+config = tf.ConfigProto()
+config.gpu_options.per_process_gpu_memory_fraction = 0.8
+session = tf.Session(config=config)
 
 from .utils.general import Config, Progbar, minibatches
 from .utils.image import pad_batch_images
