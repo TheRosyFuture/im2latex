@@ -54,12 +54,8 @@ input> data/images_test/0.png""")
 
             img = imread(img_path)
 
-        print("img")
-        print(img)
         img = greyscale(img)
-        print("hyps")
         hyps = model.predict(img)
-        print("logger")
         model.logger.info(hyps[0])
 
 

@@ -1,10 +1,11 @@
 # tensorflow
 # numpy
 scipy==0.18.1
-nltk==3.2.1
+nltk==3.3
 pillow==4.0.0
 distance
 # logging
 # multiprocessing
 six==1.10.0
 click==6.7
+flask

@@ -1,5 +1,6 @@
 results/
 tmp/
+data/
 *.rsyncignore
 *.DS_Store
 *.pyc
